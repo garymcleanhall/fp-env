@@ -1,6 +1,6 @@
 {
   "name": "fp-env",
-  "version": "1.0.0-rc.6",
+  "version": "1.0.0",
   "description": "Functional environment variable parser.",
   "main": "dist/index.js",
   "scripts": {
