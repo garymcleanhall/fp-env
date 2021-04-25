@@ -29,10 +29,10 @@ jobs:
         with:
           name: dist
           path: |
-          package.json
-          dist/
-          LICENSE
-          readme.md
+            package.json
+            dist/
+            LICENSE
+            readme.md
 
   publish-npm:
     needs: build
