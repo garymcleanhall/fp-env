@@ -19,22 +19,24 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Build
-        run: npm build
+        run: npm run build
       - name: Test
         run: npm test
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: dist
-          path: |
-            dist
+          path: dist/
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Download Build Artifacts
         uses: actions/download-artifact@v2
+        with:
+          name: dist
       - uses: actions/setup-node@v2
         with:
           node-version: 12
