@@ -1,4 +1,3 @@
-import { Monoid } from 'fp-ts/lib/Monoid'
 import { Option, some, none } from 'fp-ts/lib/Option'
 
 interface NonEmptyStringBrand {

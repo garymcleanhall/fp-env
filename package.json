@@ -5,13 +5,19 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "npx jest tests/",
-    "lint": "npx prettier --config .prettierrc ./src/**/*.ts ./tests/**/*.ts --write",
+    "lint": "npx eslint . --ext ts",
+    "prettier": "npx prettier --config .prettierrc ./src/**/*.ts ./tests/**/*.ts --write",
     "build": "npx tsc"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.22",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.5",
