@@ -1,5 +1,5 @@
-import { isNone, isSome } from "fp-ts/lib/Option"
-import { fromString } from "../src/NonEmptyString"
+import { isNone, isSome } from 'fp-ts/lib/Option'
+import { fromString } from '../src/NonEmptyString'
 
 describe('NonEmptyString', () => {
   it('can be constructed from a valid string primitive', () => {

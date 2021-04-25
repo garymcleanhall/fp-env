@@ -10,34 +10,31 @@ describe('Nested Object', () => {
       { a: { b: { d: 2 } } },
       { a: { e: { f: 3 } } },
     ])
-    const actual = pipe(
-      objs,
-      map(concatAll(monoidObjectMerge))
-    )
-    expect(actual).toStrictEqual(some({
-      a: {
-        b: {
-          c: 1,
-          d: 2
+    const actual = pipe(objs, map(concatAll(monoidObjectMerge)))
+    expect(actual).toStrictEqual(
+      some({
+        a: {
+          b: {
+            c: 1,
+            d: 2,
+          },
+          e: {
+            f: 3,
+          },
         },
-        e: {
-          f: 3
-        }
-      }
-    }))
+      })
+    )
   })
 })
 
 describe('Construct Object', () => {
   it('Can build an linear object from keys', () => {
-    expect(constructObject(['a', 'b', 'c'], 1)).toStrictEqual(
-      {
-        a: {
-          b: {
-            c: 1
-          }
-        }
-      }
-    )
+    expect(constructObject(['a', 'b', 'c'], 1)).toStrictEqual({
+      a: {
+        b: {
+          c: 1,
+        },
+      },
+    })
   })
 })
