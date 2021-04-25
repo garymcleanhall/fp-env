@@ -1,6 +1,6 @@
 # fp-env
 
-## Function Programming - Environment
+## Functional Programming - Environment
 
 Environment parser.
 
