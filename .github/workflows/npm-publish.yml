@@ -22,17 +22,22 @@ jobs:
         run: npm run build
       - name: Test
         run: npm test
+      - name: Clean Package File
+        run: npx clear-package-json package.json -o package.json
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: dist
-          path: dist/
+          path: |
+          package.json
+          dist/
+          LICENSE
+          readme.md
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Download Build Artifacts
         uses: actions/download-artifact@v2
         with:
@@ -41,6 +46,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm publish dist/
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
