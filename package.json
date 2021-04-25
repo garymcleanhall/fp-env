@@ -9,8 +9,8 @@
     "prettier": "npx prettier --config .prettierrc ./src/**/*.ts ./tests/**/*.ts --write",
     "build": "npx tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Gary McLean Hall <gary@adaptivecode.com>",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
