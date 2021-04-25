@@ -32,5 +32,15 @@
   },
   "peerDependencies": {
     "fp-ts": "~2"
-  }
+  },
+  "keywords": [
+    "typescript",
+    "environment",
+    "functional-programming"
+  ],
+  "tags": [
+    "typescript",
+    "environment",
+    "functional-programming"
+  ]
 }
