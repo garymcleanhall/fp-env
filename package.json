@@ -1,6 +1,6 @@
 {
   "name": "fp-env",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Functional environment variable parser.",
   "main": "dist/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "deepmerge": "^4.2.2"
   },
   "peerDependencies": {
-    "fp-ts": "~2"
+    "fp-ts": "^2.10"
   },
   "keywords": [
     "typescript",
